@@ -1752,11 +1752,45 @@ display: none;
 
 
 <!-- rnb-text-begin -->
+<p><strong>Introducción a R Studio:</strong></p>
+<p>R Studio es un entonrno de desarrollo integrado (IDE) para el
+lenguaje de programación R. R es un lenguaje y entorno de software para
+estadísticas y gráficos. R Studio proporciona una interfaz amigable para
+trabajar con R, facilitando la escritura, depuración y ejecución de
+código. Además de ofrecer herramientas adicionales para la visualización
+de datos y la generación de informes.</p>
+<p><strong>Beneficios de R Studio:</strong></p>
+<p>Interfaz gráfica amigable: R Studio tiene una interfaz de usuario
+intuitiva que facilita la escritura y ejecución de código R.</p>
+<p>Herramientas integradas: ofrece herramientas integradas para la
+visualización de datos, depuración de código y la creación de informes
+reproducibles.</p>
+<p>Soporte para shiny: permite desarrollar aplicaciones interactivas
+basadas en R, con Shiny.</p>
+<p>Sintaxis: La sintaxis de R es específica para análisis estadístico,
+mientras que Python es conocido por su sintaxis clara y legible.</p>
+<p>Comunidad: Ambos tienen comunidades activas, pero Python tiende a ser
+más popular en aplicaciones generales, mientras que R es muy utilizado
+en estadísticas y ciencias de datos.</p>
+<p>##<strong>Ahora, procederemos a realizar 10 ejercicios en R Studio,
+enfocándonos en variables, constante sy condiciones simples.
+</strong></p>
+<p><strong>Conceptos aplicados: </strong></p>
+<p>Una variable en programacion es un espacio de almacenamiento con un
+nombre simbólico (un identificador) que se refiere o está asociado a un
+valor o información almacenada. En R, las variables pueden almacenar
+diferentes tipos de datos, como números, texto, booleanos, entre
+otros.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0ltcHJpbWlyIGVsIHZhbG9yIGRlIGxhIHZhcmlhYmxlICdlZGFkJ1xucHJpbnQoZWRhZClcblxuYGBgIn0= -->
+<pre class="r"><code>#Imprimir el valor de la variable &#39;edad&#39;
+print(edad)
+</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDI1XG4ifQ== -->
+<pre><code>[1] 25</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1768,19 +1802,193 @@ display: none;
 <pre><code>[1] &quot;hola&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the
-toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and
-output will be saved alongside it (click the <em>Preview</em> button or
-press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the
-editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not
-run any R code chunks. Instead, the output of the chunk when it was last
-run in the editor is displayed.</p>
-<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBFamVyY2ljaW8gMjogQ3JlYXIgdW5hIGNvbnN0YW50ZSBsbGFtYWRhIFwiUElcIiB5IGFzaWduYXJsZSBlbCB2YWxvciAzLjE0MTZcblBJIDwtIDMuMTQxNlxuXG4jSW1wcmltaXIgZWwgdmFsb3IgZGUgbGEgY29uc3RhbnRlICdQSSdcbnByaW50IChQSSlcbmBgYCJ9 -->
+<pre class="r"><code># Ejercicio 2: Crear una constante llamada &quot;PI&quot; y asignarle el valor 3.1416
+PI &lt;- 3.1416
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIjAxLiBjTEFTRSAwMSAtIDE0LzEwLzI0Ig0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KDQoNCmBgYHtyfQ0KcGxvdChjYXJzKQ0KYGBgDQoNCmBgYHtyfQ0KcHJpbnQoImhvbGEiKQ0KYGBgDQoNCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDdHJsK0FsdCtJKi4NCg0KV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDdHJsK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuDQoNClRoZSBwcmV2aWV3IHNob3dzIHlvdSBhIHJlbmRlcmVkIEhUTUwgY29weSBvZiB0aGUgY29udGVudHMgb2YgdGhlIGVkaXRvci4gQ29uc2VxdWVudGx5LCB1bmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBSIGNvZGUgY2h1bmtzLiBJbnN0ZWFkLCB0aGUgb3V0cHV0IG9mIHRoZSBjaHVuayB3aGVuIGl0IHdhcyBsYXN0IHJ1biBpbiB0aGUgZWRpdG9yIGlzIGRpc3BsYXllZC4NCg==</div>
+#Imprimir el valor de la constante &#39;PI&#39;
+print (PI)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDMuMTQxNlxuIn0= -->
+<pre><code>[1] 3.1416</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><strong>Operadores Matemático en R</strong> Suma: + Resta: -
+Multiplicación: * División: / Módulo (Residuo): %%</p>
+<p><strong>Operadores de comparación en R</strong> Igualdad: ==
+Desigualdad: != Mayor que: &gt; Menor que: &lt; Mayor o igual que: &gt;=
+Menor o igual que: &lt;=</p>
+<p><strong>Operadores Lógicos en R</strong> AND Lógico: &amp; o
+&amp;&amp; OR Lógico: | o || NOT Lógico: !</p>
+<p><strong>Conceptos aplicados:</strong> Las condicionales simples
+permiten tomar decisiones en el flujo del programa basadas en una
+condición. En R, se utiliza la estructura if-else para implementar
+condicionales.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBFamVyY2ljaW8gMzogdmVyaWZpY2FyIHNpIGxhIGVkYWQgZXMgbWF5b3IgbyBpZ3VhbCBhIDE4XG5lZGFkIDwtIDE4XG5cbmlmIChlZGFkID49MTgpIHtcbiAgcHJpbnQoXCJFcmVzIG1heW9yIGRlIGVkYWRcIilcbn0gZWxzZSB7XG4gIHByaW50KFwiRXJlcyBtZW5vciBkZSBlZGFkXCIpXG59XG5gYGAifQ== -->
+<pre class="r"><code># Ejercicio 3: verificar si la edad es mayor o igual a 18
+edad &lt;- 18
+
+if (edad &gt;=18) {
+  print(&quot;Eres mayor de edad&quot;)
+} else {
+  print(&quot;Eres menor de edad&quot;)
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRXJlcyBtYXlvciBkZSBlZGFkXCJcbiJ9 -->
+<pre><code>[1] &quot;Eres mayor de edad&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><strong>Conceptos aplicados</strong> Las variables pueden utilizarse
+en operaciones matemáticas y lógicas en R</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0VqZXJjaWNpbyA0OiBDYWx1Y2xhciBlbCDDoXJlYSBkZSB1biByZWN0w6FuZ3Vsb1xubG9uZ2l0dWQgPC0gNVxuYW5jaG8gPC0gM1xuXG4jQ2FsY3VsYXIgZWwgw6FyZWEgdXRpbGl6YW5kbyBsYXMgdmFyaWFibGVzXG5hcmVhIDwtIGxvbmdpdHVkICogYW5jaG9cblxuI0ltcHJpbWlyIGVsIHJlc3VsdGFkb1xucHJpbnQocGFzdGUoXCJFbCBhcmVhIGRlbCByZWN0w6FuZ3VsbyBlczogXCIsIGFyZWEpKVxuYGBgIn0= -->
+<pre class="r"><code>#Ejercicio 4: Caluclar el área de un rectángulo
+longitud &lt;- 5
+ancho &lt;- 3
+
+#Calcular el área utilizando las variables
+area &lt;- longitud * ancho
+
+#Imprimir el resultado
+print(paste(&quot;El area del rectángulo es: &quot;, area))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRWwgYXJlYSBkZWwgcmVjdO+/vW5ndWxvIGVzOiAgMTVcIlxuIn0= -->
+<pre><code>[1] &quot;El area del rect�ngulo es:  15&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><strong>Conceptos aplicados:</strong> Se utilizan operadores lógicos
+para combinar o modificar condiciones en las expresiones
+condicionales.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0VqZXJjaWNpbyA1OiB2ZXJpZmljYXIgc2kgdW5hIHBlcnNvbmEgZXMgYWR1bHRhIHkgdGllbmUgbWVub3MgZGUgNjUgYcOxb3MuXG5lZGFkIDwtIDE4XG5cbmlmIChlZGFkID49MTggJiBlZGFkPDY1KSB7XG4gIHByaW50KFwiRXJlcyB1biBhZHVsdG8gZW4gZWRhZCBsYWJvcmFsXCIpXG59IGVsc2Uge1xuICBwcmludChcIk5vIGN1bXBsZXMgY29uIGxhcyBjb25kaWNpb25lcyBkZSBlZGFkXCIpXG59XG5gYGAifQ== -->
+<pre class="r"><code>#Ejercicio 5: verificar si una persona es adulta y tiene menos de 65 años.
+edad &lt;- 18
+
+if (edad &gt;=18 &amp; edad&lt;65) {
+  print(&quot;Eres un adulto en edad laboral&quot;)
+} else {
+  print(&quot;No cumples con las condiciones de edad&quot;)
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRXJlcyB1biBhZHVsdG8gZW4gZWRhZCBsYWJvcmFsXCJcbiJ9 -->
+<pre><code>[1] &quot;Eres un adulto en edad laboral&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><strong>Conceptos aplicados:</strong> Las variables pueden ser
+actualizadas asignándoles nuevos valores en cualquier punto del
+programa.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0VqZXJjaWNpbyA2OiBhY3R1YWxpemFyIGVkYWQgZGUgdW5hIHBlcnNvbmFcbmVkYWQgPC0gMzBcblxuI0ltcHJpbWlyIGxhIGVkYWQgYW50ZXMgZGUgbGEgYWN0dWFsaXphY2nDs25cbnByaW50KHBhc3RlKFwiRWRhZCBhbnRlcyBkZSBsYSBhY3R1YWxpemFjaW9uOiBcIiwgZWRhZCkpXG5gYGAifQ== -->
+<pre class="r"><code>#Ejercicio 6: actualizar edad de una persona
+edad &lt;- 30
+
+#Imprimir la edad antes de la actualización
+print(paste(&quot;Edad antes de la actualizacion: &quot;, edad))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRWRhZCBhbnRlcyBkZSBsYSBhY3R1YWxpemFjaW9uOiAgMzBcIlxuIn0= -->
+<pre><code>[1] &quot;Edad antes de la actualizacion:  30&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0FjdHVhbGl6YXIgbGEgZWRhZFxuZWRhZCA8LSAzNVxuXG4jSW1wcmltaXIgbGEgZWRhZCBkZXNwdcOpcyBkZSBsYSBhY3R1YWxpemFjacOzblxucHJpbnQocGFzdGUoXCJFZGFkIGRlc3B1w6lzIGRlIGxhIGFjdHVhbGl6YWNpw7NuOiBcIiwgZWRhZCkpXG5gYGAifQ== -->
+<pre class="r"><code>#Actualizar la edad
+edad &lt;- 35
+
+#Imprimir la edad después de la actualización
+print(paste(&quot;Edad después de la actualización: &quot;, edad))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRWRhZCBkZXNwde+/vXMgZGUgbGEgYWN0dWFsaXphY2nvv71uOiAgMzVcIlxuIn0= -->
+<pre><code>[1] &quot;Edad despu�s de la actualizaci�n:  35&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><strong>Conceptos aplicados:</strong> Las condicionales no se limitan
+a variables numéricas, también pueden aplicarse a strings.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0VqZXJjaWNpbyA3OiB2ZXJpZmljYXIgc2kgdW5hIGZydXRhIGVzIHVuYSBtYW56YW5hXG5mcnV0YSA8LSBcImJhbmFuYVwiXG5cbmlmIChmcnV0YSA9PSBcIm1hbnphbmFcIikge1xuICBwcmludChcIkVzIHVuYSBtYW56YW5hXCIpXG59IGVsc2Uge1xuICBwcmludChcIk5vIGVzIHVuYSBtYW56YW5hXCIpXG59XG5gYGAifQ== -->
+<pre class="r"><code>#Ejercicio 7: verificar si una fruta es una manzana
+fruta &lt;- &quot;banana&quot;
+
+if (fruta == &quot;manzana&quot;) {
+  print(&quot;Es una manzana&quot;)
+} else {
+  print(&quot;No es una manzana&quot;)
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiTm8gZXMgdW5hIG1hbnphbmFcIlxuIn0= -->
+<pre><code>[1] &quot;No es una manzana&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Se pueden realizar operaciones con strings, como la concatenación. /
+TAREA</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBFamVyY2ljaW8gODogY29uY2F0ZW5hciBkb3Mgc3RyaW5nc1xubm9tYnJlIDwtIFwiSm9oblwiXG5hcGVsbGlkbyA8LSBcIkRvZVwiXG5cbiMgQ29uY2F0ZW5hciBsb3Mgc3RyaW5nc1xubm9tYnJlX2NvbXBsZXRvIDwtIHBhc3RlKG5vbWJyZSwgYXBlbGxpZG8sIHNlcD0gXCIgXCIpXG5cbiMgSW1waXJpbWlyIGVsIG5vbWJyZSBjb21wbGV0b1xucHJpbnQocGFzdGUoXCJOb21icmUgY29tcGxldG86IFwiLCBub21icmVfY29tcGxldG8pKVxuYGBgIn0= -->
+<pre class="r"><code># Ejercicio 8: concatenar dos strings
+nombre &lt;- &quot;John&quot;
+apellido &lt;- &quot;Doe&quot;
+
+# Concatenar los strings
+nombre_completo &lt;- paste(nombre, apellido, sep= &quot; &quot;)
+
+# Impirimir el nombre completo
+print(paste(&quot;Nombre completo: &quot;, nombre_completo))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiTm9tYnJlIGNvbXBsZXRvOiAgSm9obiBEb2VcIlxuIn0= -->
+<pre><code>[1] &quot;Nombre completo:  John Doe&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Las variables lógicas (boolenas) se pueden utilizar en expresiones
+condicionales</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0VqZXJjaWNpbyA5OiB2ZXJpZmljYXIgc2kgdW5hIHBlcnNvbmEgdGllbmUgZGVzY3VlbnRvXG50aWVuZV9kZXNjdWVudG8gPC0gVFJVRVxuXG5pZiAodGllbmVfZGVzY3VlbnRvKSB7XG4gIHByaW50KFwiRXN0YSBwZXJzb25hIHRpZW5lIGRlc2N1ZW50b1wiKVxufSBlbHNlIHtcbiAgcHJpbnQoXCJFc3RhIHBlcnNvbmEgTk8gdGllbmUgZGVzY3VlbnRvXCIpXG59XG5gYGAifQ== -->
+<pre class="r"><code>#Ejercicio 9: verificar si una persona tiene descuento
+tiene_descuento &lt;- TRUE
+
+if (tiene_descuento) {
+  print(&quot;Esta persona tiene descuento&quot;)
+} else {
+  print(&quot;Esta persona NO tiene descuento&quot;)
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRXN0YSBwZXJzb25hIHRpZW5lIGRlc2N1ZW50b1wiXG4ifQ== -->
+<pre><code>[1] &quot;Esta persona tiene descuento&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Operaciones con números decimales y redondeo.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0VqZXJjaWNpbyAxMDogQ2FsY3VsYXIgZWwgcHJvbWVkaW8gZGUgdHJlcyBuw7ptZXJvcyBkZWNpbWFsZXNcbm5vdGExIDwtIDcuNVxubm90YTIgPC0gOC4zXG5ub3RhMyA8LSA2LjlcblxuI0NhbGN1bGFyIHByb21lZGlvXG5wcm9tZWRpbyA8LSByb3VuZChtZWFuKG5vdGExLG5vdGEyLG5vdGEzKSlcblxuI0ltcHJpbWlyIGVsIHByb21lZGlvIHJlZG9uZGVhZG9cbnByaW50KHBhc3RlKFwiRWwgcHJvbWVkaW8gZXM6IFwiLCBwcm9tZWRpbykpXG5gYGAifQ== -->
+<pre class="r"><code>#Ejercicio 10: Calcular el promedio de tres números decimales
+nota1 &lt;- 7.5
+nota2 &lt;- 8.3
+nota3 &lt;- 6.9
+
+#Calcular promedio
+promedio &lt;- round(mean(nota1,nota2,nota3))
+
+#Imprimir el promedio redondeado
+print(paste(&quot;El promedio es: &quot;, promedio))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRWwgcHJvbWVkaW8gZXM6ICA4XCJcbiJ9 -->
+<pre><code>[1] &quot;El promedio es:  8&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIjAxLiBjTEFTRSAwMSAtIDE0LzEwLzI0Ig0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KKipJbnRyb2R1Y2Npw7NuIGEgUiBTdHVkaW86KioNCg0KUiBTdHVkaW8gZXMgdW4gZW50b25ybm8gZGUgZGVzYXJyb2xsbyBpbnRlZ3JhZG8gKElERSkgcGFyYSBlbCBsZW5ndWFqZSBkZSBwcm9ncmFtYWNpw7NuIFIuIFIgZXMgdW4gbGVuZ3VhamUgeSBlbnRvcm5vIGRlIHNvZnR3YXJlIHBhcmEgZXN0YWTDrXN0aWNhcyB5IGdyw6FmaWNvcy4gUiBTdHVkaW8gcHJvcG9yY2lvbmEgdW5hIGludGVyZmF6IGFtaWdhYmxlIHBhcmEgdHJhYmFqYXIgY29uIFIsIGZhY2lsaXRhbmRvIGxhIGVzY3JpdHVyYSwgZGVwdXJhY2nDs24geSBlamVjdWNpw7NuIGRlIGPDs2RpZ28uIEFkZW3DoXMgZGUgb2ZyZWNlciBoZXJyYW1pZW50YXMgYWRpY2lvbmFsZXMgcGFyYSBsYSB2aXN1YWxpemFjacOzbiBkZSBkYXRvcyB5IGxhIGdlbmVyYWNpw7NuIGRlIGluZm9ybWVzLg0KDQoqKkJlbmVmaWNpb3MgZGUgUiBTdHVkaW86KioNCg0KSW50ZXJmYXogZ3LDoWZpY2EgYW1pZ2FibGU6IFIgU3R1ZGlvIHRpZW5lIHVuYSBpbnRlcmZheiBkZSB1c3VhcmlvIGludHVpdGl2YSBxdWUgZmFjaWxpdGEgbGEgZXNjcml0dXJhIHkgZWplY3VjacOzbiBkZSBjw7NkaWdvIFIuDQoNCkhlcnJhbWllbnRhcyBpbnRlZ3JhZGFzOiBvZnJlY2UgaGVycmFtaWVudGFzIGludGVncmFkYXMgcGFyYSBsYSB2aXN1YWxpemFjacOzbiBkZSBkYXRvcywgZGVwdXJhY2nDs24gZGUgY8OzZGlnbyB5IGxhIGNyZWFjacOzbiBkZSBpbmZvcm1lcyByZXByb2R1Y2libGVzLg0KDQpTb3BvcnRlIHBhcmEgc2hpbnk6IHBlcm1pdGUgZGVzYXJyb2xsYXIgYXBsaWNhY2lvbmVzIGludGVyYWN0aXZhcyBiYXNhZGFzIGVuIFIsIGNvbiBTaGlueS4NCg0KU2ludGF4aXM6IExhIHNpbnRheGlzIGRlIFIgZXMgZXNwZWPDrWZpY2EgcGFyYSBhbsOhbGlzaXMgZXN0YWTDrXN0aWNvLCBtaWVudHJhcyBxdWUgUHl0aG9uIGVzIGNvbm9jaWRvIHBvciBzdSBzaW50YXhpcyBjbGFyYSB5IGxlZ2libGUuDQoNCkNvbXVuaWRhZDogQW1ib3MgdGllbmVuIGNvbXVuaWRhZGVzIGFjdGl2YXMsIHBlcm8gUHl0aG9uIHRpZW5kZSBhIHNlciBtw6FzIHBvcHVsYXIgZW4gYXBsaWNhY2lvbmVzIGdlbmVyYWxlcywgbWllbnRyYXMgcXVlIFIgZXMgbXV5IHV0aWxpemFkbyBlbiBlc3RhZMOtc3RpY2FzIHkgY2llbmNpYXMgZGUgZGF0b3MuDQoNCiMjKipBaG9yYSwgcHJvY2VkZXJlbW9zIGEgcmVhbGl6YXIgMTAgZWplcmNpY2lvcyBlbiBSIFN0dWRpbywgZW5mb2PDoW5kb25vcyBlbiB2YXJpYWJsZXMsIGNvbnN0YW50ZSBzeSBjb25kaWNpb25lcyBzaW1wbGVzLiAqKg0KDQoqKkNvbmNlcHRvcyBhcGxpY2Fkb3M6ICoqDQoNClVuYSB2YXJpYWJsZSBlbiBwcm9ncmFtYWNpb24gZXMgdW4gZXNwYWNpbyBkZSBhbG1hY2VuYW1pZW50byBjb24gdW4gbm9tYnJlIHNpbWLDs2xpY28gKHVuIGlkZW50aWZpY2Fkb3IpIHF1ZSBzZSByZWZpZXJlIG8gZXN0w6EgYXNvY2lhZG8gYSB1biB2YWxvciBvIGluZm9ybWFjacOzbiBhbG1hY2VuYWRhLiBFbiBSLCBsYXMgdmFyaWFibGVzIHB1ZWRlbiBhbG1hY2VuYXIgZGlmZXJlbnRlcyB0aXBvcyBkZSBkYXRvcywgY29tbyBuw7ptZXJvcywgdGV4dG8sIGJvb2xlYW5vcywgZW50cmUgb3Ryb3MuDQoNCmBgYHtyfQ0KIyBFamVyY2ljaW8gMTogQ3JlYXIgdW5hIHZhcmlhYmxlIGxsYW1hZGEgJ2VkYWQnIHkgYXNpZ25hcmxlIGVsIHZhbG9yIDI1DQplZGFkIDwtIDI1DQoNCiNJbXByaW1pciBlbCB2YWxvciBkZSBsYSB2YXJpYWJsZSAnZWRhZCcNCnByaW50KGVkYWQpDQpgYGANCg0KYGBge3J9DQpwcmludCgiaG9sYSIpDQpgYGANCmBgYHtyfQ0KIyBFamVyY2ljaW8gMjogQ3JlYXIgdW5hIGNvbnN0YW50ZSBsbGFtYWRhICJQSSIgeSBhc2lnbmFybGUgZWwgdmFsb3IgMy4xNDE2DQpQSSA8LSAzLjE0MTYNCg0KI0ltcHJpbWlyIGVsIHZhbG9yIGRlIGxhIGNvbnN0YW50ZSAnUEknDQpwcmludCAoUEkpDQpgYGANCioqT3BlcmFkb3JlcyBNYXRlbcOhdGljbyBlbiBSKioNClN1bWE6ICsNClJlc3RhOiAtDQpNdWx0aXBsaWNhY2nDs246ICoNCkRpdmlzacOzbjogLw0KTcOzZHVsbyAoUmVzaWR1byk6ICUlDQoNCioqT3BlcmFkb3JlcyBkZSBjb21wYXJhY2nDs24gZW4gUioqDQpJZ3VhbGRhZDogPT0NCkRlc2lndWFsZGFkOiAhPQ0KTWF5b3IgcXVlOiA+DQpNZW5vciBxdWU6IDwNCk1heW9yIG8gaWd1YWwgcXVlOiA+PQ0KTWVub3IgbyBpZ3VhbCBxdWU6IDw9DQoNCioqT3BlcmFkb3JlcyBMw7NnaWNvcyBlbiBSKioNCkFORCBMw7NnaWNvOiAmIG8gJiYNCk9SIEzDs2dpY286IHwgbyB8fA0KTk9UIEzDs2dpY286ICENCg0KKipDb25jZXB0b3MgYXBsaWNhZG9zOioqDQpMYXMgY29uZGljaW9uYWxlcyBzaW1wbGVzIHBlcm1pdGVuIHRvbWFyIGRlY2lzaW9uZXMgZW4gZWwgZmx1am8gZGVsIHByb2dyYW1hIGJhc2FkYXMgZW4gdW5hIGNvbmRpY2nDs24uIEVuIFIsIHNlIHV0aWxpemEgbGEgZXN0cnVjdHVyYSBpZi1lbHNlIHBhcmEgaW1wbGVtZW50YXIgY29uZGljaW9uYWxlcy4NCg0KYGBge3J9DQojIEVqZXJjaWNpbyAzOiB2ZXJpZmljYXIgc2kgbGEgZWRhZCBlcyBtYXlvciBvIGlndWFsIGEgMTgNCmVkYWQgPC0gMTgNCg0KaWYgKGVkYWQgPj0xOCkgew0KICBwcmludCgiRXJlcyBtYXlvciBkZSBlZGFkIikNCn0gZWxzZSB7DQogIHByaW50KCJFcmVzIG1lbm9yIGRlIGVkYWQiKQ0KfQ0KYGBgDQoqKkNvbmNlcHRvcyBhcGxpY2Fkb3MqKg0KTGFzIHZhcmlhYmxlcyBwdWVkZW4gdXRpbGl6YXJzZSBlbiBvcGVyYWNpb25lcyBtYXRlbcOhdGljYXMgeSBsw7NnaWNhcyBlbiBSDQoNCmBgYHtyfQ0KI0VqZXJjaWNpbyA0OiBDYWx1Y2xhciBlbCDDoXJlYSBkZSB1biByZWN0w6FuZ3Vsbw0KbG9uZ2l0dWQgPC0gNQ0KYW5jaG8gPC0gMw0KDQojQ2FsY3VsYXIgZWwgw6FyZWEgdXRpbGl6YW5kbyBsYXMgdmFyaWFibGVzDQphcmVhIDwtIGxvbmdpdHVkICogYW5jaG8NCg0KI0ltcHJpbWlyIGVsIHJlc3VsdGFkbw0KcHJpbnQocGFzdGUoIkVsIGFyZWEgZGVsIHJlY3TDoW5ndWxvIGVzOiAiLCBhcmVhKSkNCmBgYA0KKipDb25jZXB0b3MgYXBsaWNhZG9zOioqDQpTZSB1dGlsaXphbiBvcGVyYWRvcmVzIGzDs2dpY29zIHBhcmEgY29tYmluYXIgbyBtb2RpZmljYXIgY29uZGljaW9uZXMgZW4gbGFzIGV4cHJlc2lvbmVzIGNvbmRpY2lvbmFsZXMuDQoNCmBgYHtyfQ0KI0VqZXJjaWNpbyA1OiB2ZXJpZmljYXIgc2kgdW5hIHBlcnNvbmEgZXMgYWR1bHRhIHkgdGllbmUgbWVub3MgZGUgNjUgYcOxb3MuDQplZGFkIDwtIDE4DQoNCmlmIChlZGFkID49MTggJiBlZGFkPDY1KSB7DQogIHByaW50KCJFcmVzIHVuIGFkdWx0byBlbiBlZGFkIGxhYm9yYWwiKQ0KfSBlbHNlIHsNCiAgcHJpbnQoIk5vIGN1bXBsZXMgY29uIGxhcyBjb25kaWNpb25lcyBkZSBlZGFkIikNCn0NCmBgYA0KKipDb25jZXB0b3MgYXBsaWNhZG9zOioqDQpMYXMgdmFyaWFibGVzIHB1ZWRlbiBzZXIgYWN0dWFsaXphZGFzIGFzaWduw6FuZG9sZXMgbnVldm9zIHZhbG9yZXMgZW4gY3VhbHF1aWVyIHB1bnRvIGRlbCBwcm9ncmFtYS4NCg0KYGBge3J9DQojRWplcmNpY2lvIDY6IGFjdHVhbGl6YXIgZWRhZCBkZSB1bmEgcGVyc29uYQ0KZWRhZCA8LSAzMA0KDQojSW1wcmltaXIgbGEgZWRhZCBhbnRlcyBkZSBsYSBhY3R1YWxpemFjacOzbg0KcHJpbnQocGFzdGUoIkVkYWQgYW50ZXMgZGUgbGEgYWN0dWFsaXphY2nDs246ICIsIGVkYWQpKQ0KDQojQWN0dWFsaXphciBsYSBlZGFkDQplZGFkIDwtIDM1DQoNCiNJbXByaW1pciBsYSBlZGFkIGRlc3B1w6lzIGRlIGxhIGFjdHVhbGl6YWNpw7NuDQpwcmludChwYXN0ZSgiRWRhZCBkZXNwdcOpcyBkZSBsYSBhY3R1YWxpemFjacOzbjogIiwgZWRhZCkpDQpgYGANCioqQ29uY2VwdG9zIGFwbGljYWRvczoqKg0KTGFzIGNvbmRpY2lvbmFsZXMgbm8gc2UgbGltaXRhbiBhIHZhcmlhYmxlcyBudW3DqXJpY2FzLCB0YW1iacOpbiBwdWVkZW4gYXBsaWNhcnNlIGEgc3RyaW5ncy4NCg0KYGBge3J9DQojRWplcmNpY2lvIDc6IHZlcmlmaWNhciBzaSB1bmEgZnJ1dGEgZXMgdW5hIG1hbnphbmENCmZydXRhIDwtICJiYW5hbmEiDQoNCmlmIChmcnV0YSA9PSAibWFuemFuYSIpIHsNCiAgcHJpbnQoIkVzIHVuYSBtYW56YW5hIikNCn0gZWxzZSB7DQogIHByaW50KCJObyBlcyB1bmEgbWFuemFuYSIpDQp9DQpgYGANCg0KU2UgcHVlZGVuIHJlYWxpemFyIG9wZXJhY2lvbmVzIGNvbiBzdHJpbmdzLCBjb21vIGxhIGNvbmNhdGVuYWNpw7NuLiAvIFRBUkVBDQoNCmBgYHtyfQ0KIyBFamVyY2ljaW8gODogY29uY2F0ZW5hciBkb3Mgc3RyaW5ncw0Kbm9tYnJlIDwtICJKb2huIg0KYXBlbGxpZG8gPC0gIkRvZSINCg0KIyBDb25jYXRlbmFyIGxvcyBzdHJpbmdzDQpub21icmVfY29tcGxldG8gPC0gcGFzdGUobm9tYnJlLCBhcGVsbGlkbywgc2VwPSAiICIpDQoNCiMgSW1waXJpbWlyIGVsIG5vbWJyZSBjb21wbGV0bw0KcHJpbnQocGFzdGUoIk5vbWJyZSBjb21wbGV0bzogIiwgbm9tYnJlX2NvbXBsZXRvKSkNCg0KYGBgDQpMYXMgdmFyaWFibGVzIGzDs2dpY2FzIChib29sZW5hcykgc2UgcHVlZGVuIHV0aWxpemFyIGVuIGV4cHJlc2lvbmVzIGNvbmRpY2lvbmFsZXMNCg0KYGBge3J9DQojRWplcmNpY2lvIDk6IHZlcmlmaWNhciBzaSB1bmEgcGVyc29uYSB0aWVuZSBkZXNjdWVudG8NCnRpZW5lX2Rlc2N1ZW50byA8LSBUUlVFDQoNCmlmICh0aWVuZV9kZXNjdWVudG8pIHsNCiAgcHJpbnQoIkVzdGEgcGVyc29uYSB0aWVuZSBkZXNjdWVudG8iKQ0KfSBlbHNlIHsNCiAgcHJpbnQoIkVzdGEgcGVyc29uYSBOTyB0aWVuZSBkZXNjdWVudG8iKQ0KfQ0KYGBgDQpPcGVyYWNpb25lcyBjb24gbsO6bWVyb3MgZGVjaW1hbGVzIHkgcmVkb25kZW8uDQoNCmBgYHtyfQ0KI0VqZXJjaWNpbyAxMDogQ2FsY3VsYXIgZWwgcHJvbWVkaW8gZGUgdHJlcyBuw7ptZXJvcyBkZWNpbWFsZXMNCm5vdGExIDwtIDcuNQ0Kbm90YTIgPC0gOC4zDQpub3RhMyA8LSA2LjkNCg0KI0NhbGN1bGFyIHByb21lZGlvDQpwcm9tZWRpbyA8LSByb3VuZChtZWFuKG5vdGExLG5vdGEyLG5vdGEzKSkNCg0KI0ltcHJpbWlyIGVsIHByb21lZGlvIHJlZG9uZGVhZG8NCnByaW50KHBhc3RlKCJFbCBwcm9tZWRpbyBlczogIiwgcHJvbWVkaW8pKQ0KYGBgDQo=</div>
 
 
 
