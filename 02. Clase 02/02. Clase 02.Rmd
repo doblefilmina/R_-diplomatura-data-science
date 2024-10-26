@@ -1,0 +1,166 @@
+---
+title: "02. CLASE 02 - 21/10/24"
+subtitle: "Manipulación de datos"
+output: html_notebook
+---
+
+##Datos
+
+Vamos a utilizar a modo de ejemplo el conjunto de datos que viene cargado en R con dats climáticos.
+
+```{r} 
+data("airquality")
+```
+
+Con la función *{Summary()}* obtenemos una rápido visualización de la composición del conjunto de datos.
+
+```{r}
+summary(airquality)
+```
+
+##Crear filtros
+
+En algunas ocasiones debemos realizar un análisis sobre un subconjunto de casos. En R tenemos muchas opciones para realizar esta operación.
+
+##Selección mediante un vector lógico
+
+Supongamos que queremos realizar un estudio sobre el mes de enero (Month ==1).
+Podemos crear un vector lógico para identificar los casos donde se cumpla esta condición y emplear este vector como selector. Por ejemplo:
+
+```{r}
+selector <-  airquality$Month==1
+enero <- airquality[selector,]
+
+```
+
+
+O en forma más directa podemos usar el vector lógico dentro de los corchetes.
+
+```{r}
+enero <- airquality[airquality$Month==1,]
+
+```
+
+##Función subset
+
+La función *{subset}* nos retorna un data frame que cumple con las condiciones requeridas. La selección la realiza tanto en filas (mediante expresiones lógicas) y/o en columnas (indicando el nombre de las columnas).
+
+```{r}
+subset(x=,subset=,select=)
+```
+
+Los parámetros de esta función son:
+
+* **x** indica el nombre del data frame al que queremos aplicar el filtro.
+* **subset** es una expresión lógica que indica las filas que queremos conservar.
+* **select** es un vector indicando los nombres de las columnas que queremos conservar.
+
+Por ejemplo, queremos realizar un estudio de las temperaturas observadas en el mes de julio.
+
+```{r}
+julio <- subset(x=airquality,
+                subset= Month==7, #Seleccionamos el grupo de filas donde el mes es 7 (julio)
+                select = -c(Month, Day, Temp) #Seleccionamos un grupo de columnas.
+                )
+```
+
+
+Si el argumento *{select}* no está definido, entonces selecciona todas las columnas y actúa como un filtro. Si anteponemos el signo *{-}* delante del vector de nombres, en lugar de seleccionar, elimina.
+
+Si el argumento *{subset}* no está definido, entonces selecciona todas las filas y actúa como un selector de columnas. Si anteponemos el operador de negación *{!}* delante de la expresión lógica, entonces en lugar de seleccionar, elimina las filas.
+
+##Selecciones aleatorias
+###Realizar muestras al azar
+Para seleccionar una muestra al azar debemos de alguna forma crear números aleatorios y existen muchas maneras de generarlos.
+La función *{sample}* selecciona números al azar de un vector específico definido en el argumento *{x}*.
+
+* *x* vector donde obtener las muestras
+* *size* tamaño de la muestra seleccionada
+* *replace* es un vector lógico que indica si la mestra es con reposición. Si es FALSE los elementos pueden ser seleccionados una sola vez. Si es TRUE los elementos pueden ser seleccionados repetidas veces.
+
+Ejemplo:
+```{r}
+#Simulamos el lanzamiento de un cubilete de 5 dados
+sample(x=1:6, size = 5, replace = TRUE)
+
+```
+Ahora utilizamos esta función para seleccionar filas de un conjunto de datos.
+
+```{r}
+filas <- nrow(airquality)
+muestra <- sample(x=1:filas, size=filas/2, replace=FALSE)
+datosMuestra <- airquality[muestra,]
+```
+
+Y si en lugar de seleccionar queremos eliminar los casos anteponemos el signo *{-}*.
+
+```{r}
+datosNoMuestra <-  airquality[-muestra,]
+```
+
+##Filtrando con un vector lógico
+Del mismo modo podemos emplear un vector lógico.
+La función *{rbinom}* genera valores binarios teniendo el 1 la probabilidad determinada de aparición.
+
+* **n** número de observaciones
+* **size** es el número de tiradas
+* **prob** es la probabilidad de éxito.
+
+```{r}
+seleccion <- rbinom(n=nrow(airquality), size=1, prob=0.5)==1
+datosSeleccion <- airquality[seleccion,]
+datosNoSeleccion <- airquality[!seleccion,]
+```
+
+##Particionar un conjunto de datos
+Estas técnicas son utilizadas típicamente para particionar un conjunto de datos y disponer de un conjunto para entrenar un modelo y el otro para testear sus resultados.
+
+###Ordenamiento
+Para ordenar un data frame en R tenemos que utilizar la función auxiliar que se llama *{order}*. La operación de ordenamiento se realiza en dos pasos.
+1- La función *{oder}* nos va a devolver un vector donde por ejemplo, su primer elemento nos va a decir en qué posición se encuentra su primer valor.
+2- Una vez que tenemos este vector con los índices correspondientes, utilizamos el vector de ordenamiento para indexar.
+Como resultado obtendremos un nuevo data frame ordenado según criterio utilizado en la función *{order}*.
+
+Veamos un ejemplo simple:
+Construimos un conjnto de datos
+
+```{r}
+datos <- data.frame(cliente=c(1,2,3,4,5,6,7),
+                    zona= c(1,1,1,2,2,2,3),
+                    monto= c(50,200,100,150,350,250,NA)
+                    )
+```
+
+**PASO 1**
+
+La función *{order}* toma la siguiente estructura:
+
+```{r}
+order(x, na.last=TRUE, DECREASING=FALSE)
+```
+
+
+
+```{r}
+View(airquality)
+```
+
+
+```{r}
+
+```
+
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*.
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
