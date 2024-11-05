@@ -1,0 +1,199 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+**Condicionales en RStudio**
+En Rstudio, al igual que en muchos lenguajes de programación, las estructuras condicionales se utilizan para controlar el flujo del programa basándose en condiciones lógicas. En R, las condicionales más comunes son if, else, y else if. Estas estructuras permiten ejecutar bloques de código específicos según si se cumple o no una condición.
+
+**bucles**
+
+En programación , los bucles (también conocidos como cilcos o loops) son estructuras que permiten repetir un bloque de códiog varias veces, de acuerdo con ciertas condiciones o un número predefinido de iteraciones. Los bucles son herramientas poderosas para automatizar tareas repetitivas y ejecutar un conjunto de instrucciones de manera eficiente. En Rstudio, al igual que en muchos otros lenguajes de programación, existen varios tipos de bucles.
+
+**Beneficios de las Funciones en R:**
+
+Reutilización del código: las funciones permiten escribir código que se puede reutilizar en diferentes partes del programa, evitando duplicación y mejorando la mantenibilidad.
+
+Modularidad: Al dividir un programa en funciones más pequeñas y especializadas, se facilita la comprensión y el mantenimiento del código.
+
+Abstracción: las funciones permiten abstraer detalles internos y proporcionar una interfaz siimple para interactuar con el código, lo que facilita su uso.
+
+Organización: las funciones ayudan a organizar el código de manera estructurada, dividiendo las tareas en partes manejables.
+
+Mejora de la legibilidad: al dar nombres descriptivos a las funciones, el código se vuelve más legible y comprensible, tanto para el programador como para otros colaboradores.
+
+**Funciones en Rstudio:**
+En Rstudio una función es un bloque de código que realiza una tarea específica y puede ser reutilizado llamándolo con diferentes argumentos. Las funciones en R se definen mediante la palabra clave function seguida de una lista de parámetros, el cuerpo de la función y, opcionalmente, un valor de retorno.
+
+**Ejercicio 1: condicional simple**
+Enunciado:
+Escribe un programa en R que solicite al usuario ingresar un número. Si el número es positivo, imprime en la consola "El número es positivo", de lo contrario imprime "El número no es positivo".
+
+
+```{r}
+#Solicitar al usuario ingresar un número
+numero <- as.numeric(readline(prompt="Ingrese un número: "))
+
+#Condición simple
+if (numero > 0) {
+  cat("El número es positivo")
+} else {
+  cat("El número no es positivo")
+}
+```
+
+**Ejercicio 2: Condicional Anidado**
+Enunciado:
+Crea un programa en R que pida al usuario ingresar dos números. Luego, verifica si el primer número es mayor, menor o igual al segundo número. Imprime el resultado correspondiente.
+
+```{r}
+#Solicitar al usuario ingresar dos números
+num1 <- as.numeric(readline(prompt = "Ingrese el primer número: "))
+num2 <- as.numeric(readline(prompt = "Ingrese el segundo número: "))
+
+# Condiciones anidadas
+if(num1 > num2 ){
+  cat("El primer número es mayro que el segundo")
+} else if (num1 < num2) {
+  cat("el primer número es menor al segundo")
+} else {
+  cat("El primer número es igual al segundo")
+}
+```
+
+**Ejercicio 3 y 4: Bucle definido**
+
+Enunciado 3:
+Utilizando un bucle for, imprime los números del 1 al 5 en la consola.
+
+Enunciado 4:
+Modifica el programa anterior para imprimir la suma de las números del 1 al 5
+
+```{r}
+#Bucle for para imprimir números del 1 al 5.
+for (i in 1:5) {
+  cat(i, " , ")
+}
+
+```
+
+```{r}
+#Bucle for para imprimir la suma de los números del 1 al 5.
+suma <- 0
+for(i in 1:5) {
+  suma <- suma + i
+}
+cat("La suma de los números del 1 al 5 es: ", suma, "\n")
+```
+**Bucle indefinido**
+Enunciado 5:
+Escribe un programa que solicite al usuario ingresar números positivos continuamente. El bucle debe terminar cuando el usuario ingrese un número negativo. Luego, imprime la suma de los números positivos ingresados.
+
+```{r}
+#Bucle while para ingresar números positivos y calcular la suma
+suma_positivos <- 0
+
+while(TRUE) {
+  numero <- as.numeric(readline(prompt = "Ingrese un número positivo (ingrese negativo para salir): "))
+  if(numero < 0) {
+    break
+  }
+  suma_positivos <- suma_positivos + numero
+}
+
+cat("La suma de los números es: ", suma_positivos)
+```
+Enunciado 6:
+Mejora el programa anterior para también calcular y mostrar el promedio de los números positivos ingresados.
+
+```{r}
+#Bucle while para ingresar números positivos y calcular la suma y el promedio
+suma_positivos <- 0
+contador <- 0
+
+while(TRUE) {
+  numero <- as.numeric(readline(prompt = "Ingrese un número positivo (ingrese negativo para salir): "))
+  if(numero < 0) {
+    break
+  }
+  suma_positivos <- suma_positivos + numero
+  contador <- contador + 1
+}
+promedio <- suma_positivos/contador
+cat("La suma de los números es: ", suma_positivos, "\n")
+cat("El promedio de los números es : ", promedio, "\n")
+```
+**Ejercicio 7: Función sencilla**
+
+Enunciado:
+Crea una función llamada cuadrado que tome un número como argumento y devuelva el cuadrado de ese número.
+
+```{r}
+#Definición de la función cuadrado.
+cuadrado <- function(x){
+  return(x^2)
+}
+
+#Ejemplo de uso
+resultado <- cuadrado(6)
+cat("El cuadrado de 6 es: ", resultado, "\n")
+```
+
+**Ejercicio 8. Función de parámetros opcionales**
+Enunciado:
+Modifica l afunción cuadrado para que tenga un parámetro opcional llamado invertir que, si es verdadero, devolverá el cuadrado negativo del número.
+
+```{r}
+#Modificación de la función cuadrado con parámetro opcional
+cuadrado <- function(x, invertir=FALSE){
+  resultado <- x^2
+  if (invertir) {
+    resultado <- -resultado
+  }
+  
+  return(resultado)
+}
+
+#Ejemplo de uso
+resultado_normal <- cuadrado(4)
+resultado_invertido <- cuadrado(4, TRUE)
+
+print(resultado_normal)
+print(resultado_invertido)
+```
+
+**Ejercicio 9: Cálculo de factorial**
+```{r}
+#Definición de la función recursiva factorial
+factorial <- function(n){
+  if(n<=1){
+    return(1)
+  } else {
+    return(n * factorial(n - 1))
+  }
+}
+
+#Ejemplo de uso
+resultado <- factorial(5)
+print(resultado)
+```
+**Ejercicio 10: Función con lista de Argumentos**
+Crea una función llamada promedio que acepte una lista variable de números como argumentos y devuelve el promedio.
+
+```{r}
+#Definición de la función promedio con lista de argumentos
+promedio <- function(...){
+  numeros <- c(...)
+  if(length(numeros)==0){
+    return(NULL)
+  } 
+  
+  promedio <- mean(numeros)
+  return(promedio)
+}
+
+#Ejemplo de uso
+resultado <- promedio(2,4,6,8,10)
+print(resultado)
+```
+
